@@ -1,6 +1,9 @@
 # mcl_homedecor
+
 ===
+
 An version of the homedecor modpack altered to work with the MineClone 2 subgame.
+
 ===
 
 Based on the original:
