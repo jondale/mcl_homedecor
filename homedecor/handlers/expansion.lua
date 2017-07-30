@@ -174,9 +174,13 @@ function homedecor.bed_expansion(pos, placer, itemstack, pointed_thing, trybunks
 
 	local thisnode = minetest.get_node(pos)
 	local param2 = thisnode.param2
-	local fdir = param2 % 8
+	local fdir = param2 % 8 
 
-	local fxd = homedecor.wall_fdir_to_fwd[fdir+1][1]
+	if fdir < 2 then
+            fdir = 2
+        end
+
+        local fxd = homedecor.wall_fdir_to_fwd[fdir+1][1]
 	local fzd = homedecor.wall_fdir_to_fwd[fdir+1][2]
 
 	local forwardpos = {x=pos.x+fxd, y=pos.y, z=pos.z+fzd}
